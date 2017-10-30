@@ -4,6 +4,7 @@
 //gl lib
 #include <deque> //for data structure
 #include <GL/glut.h>
+using namespace std;
 
 //direction
 #define UP    1
@@ -20,6 +21,7 @@
  int move_speed = 100;
  int growth_stage = 0;//
 int growth = 2;//
+int score=0;
 //display function
 void food(){//to create food 
     if(!food_available){
@@ -113,6 +115,8 @@ direction = new_direction;
         if(part_coords[0][0]        == food_coords[0] &&
            part_coords[0][1] + 2.0f == food_coords[1]){
             growth_stage++;
+            score+=10;
+            cout<<"Score: "<<score<<"\n";
             food_available = false;
         }
 
@@ -135,6 +139,8 @@ direction = new_direction;
         if(part_coords[0][0]        == food_coords[0] &&
            part_coords[0][1] - 2.0f == food_coords[1]){
             growth_stage++;
+            score+=10;
+            cout<<"Score: "<<score<<"\n";
             food_available = false;
         }
 
@@ -161,6 +167,8 @@ direction = new_direction;
         if(part_coords[0][0] - 2.0f == food_coords[0] &&
            part_coords[0][1]        == food_coords[1]){
             growth_stage++;
+            score+=10;
+            cout<<"Score: "<<score<<"\n";
             food_available = false;
         }
 
@@ -183,6 +191,8 @@ direction = new_direction;
         if(part_coords[0][0] + 2.0f == food_coords[0] &&
            part_coords[0][1]        == food_coords[1]){
             growth_stage++;
+             score+=10;
+            cout<<"Score: "<<score<<"\n";
             food_available = false;
         }
 
