@@ -102,12 +102,14 @@ direction = new_direction;
         for(unsigned int a = 0; a < part_coords.size(); a++){
             if(part_coords[0][0]        == part_coords[a][0] &&
                part_coords[0][1] + 2.0f == part_coords[a][1]){
+                cout<<"Score: "<<score<<"\n";
                 exit(0);
             }
         }
 
         // Did we hit a wall?
         if(part_coords[0][1] == map_half_length){
+            cout<<"Score: "<<score<<"\n";
             exit(0);
         }
 
@@ -116,7 +118,6 @@ direction = new_direction;
            part_coords[0][1] + 2.0f == food_coords[1]){
             growth_stage++;
             score+=10;
-            cout<<"Score: "<<score<<"\n";
             food_available = false;
         }
 
@@ -126,12 +127,14 @@ direction = new_direction;
         for(unsigned int a = 0; a < part_coords.size(); a++){
             if(part_coords[0][0]        == part_coords[a][0] &&
                part_coords[0][1] - 2.0f == part_coords[a][1]){
+               cout<<"Score: "<<score<<"\n";
                 exit(0);
             }
         }
 
         // Did we hit a wall?
         if(part_coords[0][1] == -map_half_length){
+            cout<<"Score: "<<score<<"\n";
             exit(0);
         }
 
@@ -140,7 +143,7 @@ direction = new_direction;
            part_coords[0][1] - 2.0f == food_coords[1]){
             growth_stage++;
             score+=10;
-            cout<<"Score: "<<score<<"\n";
+            
             food_available = false;
         }
 
@@ -154,12 +157,14 @@ direction = new_direction;
         for(unsigned int a = 0; a < part_coords.size(); a++){
             if(part_coords[0][0] - 2.0f == part_coords[a][0] &&
                part_coords[0][1]        == part_coords[a][1]){
+                cout<<"Score: "<<score<<"\n";
                 exit(0);
             }
         }
 
         // Did we hit a wall?
         if(part_coords[0][0] == -map_half_length){
+            cout<<"Score: "<<score<<"\n";
             exit(0);
         }
 
@@ -168,7 +173,6 @@ direction = new_direction;
            part_coords[0][1]        == food_coords[1]){
             growth_stage++;
             score+=10;
-            cout<<"Score: "<<score<<"\n";
             food_available = false;
         }
 
@@ -178,12 +182,14 @@ direction = new_direction;
         for(unsigned int a = 0; a < part_coords.size(); a++){
             if(part_coords[0][0] + 2.0f == part_coords[a][0] &&
                part_coords[0][1]        == part_coords[a][1]){
+                cout<<"Score: "<<score<<"\n";
                 exit(0);
             }
         }
 
         // Did we hit a wall?
         if(part_coords[0][0] == map_half_length){
+            cout<<"Score: "<<score<<"\n";
             exit(0);
         }
 
@@ -192,7 +198,6 @@ direction = new_direction;
            part_coords[0][1]        == food_coords[1]){
             growth_stage++;
              score+=10;
-            cout<<"Score: "<<score<<"\n";
             food_available = false;
         }
 
